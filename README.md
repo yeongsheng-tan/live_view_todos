@@ -1,13 +1,13 @@
 # LiveViewTodos
 
-Project to learn and build a Phoenix.LiveView and Phoenix.PubSub app without JS
+Project to learn and build a Phoenix.LiveView and distributed Phoenix.PubSub app over Redis without JS
 
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
+  * Create and migrate your database with `DB_PORT=5432 mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+  * Start Phoenix endpoint with `DB_PORT=5432 PHX_PORT=4000 NODE=n1 mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 

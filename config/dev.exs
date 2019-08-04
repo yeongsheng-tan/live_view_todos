@@ -2,10 +2,11 @@ use Mix.Config
 
 # Configure your database
 config :live_view_todos, LiveViewTodos.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "root",
+  password: "",
   database: "live_view_todos_dev",
   hostname: "localhost",
+  port: System.get_env("DB_PORT") || 5432,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -16,7 +17,7 @@ config :live_view_todos, LiveViewTodos.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :live_view_todos, LiveViewTodosWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: System.get_env("PHX_PORT") || 4000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
