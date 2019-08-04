@@ -1,5 +1,7 @@
 # LiveViewTodos
 
+Project to learn and build a Phoenix.LiveView and Phoenix.PubSub app without JS
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
@@ -14,7 +16,5 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  * LiveView Guides: https://github.com/phoenixframework/phoenix_live_view#installation
+  * Tutorial Ref: https://dennisbeatty.com/2019/04/24/how-to-create-a-todo-list-with-phoenix-liveview.html 
