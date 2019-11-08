@@ -19,9 +19,10 @@ import "url-search-params-polyfill"
 import "formdata-polyfill"
 import "classlist-polyfill"
 
+import {Socket} from "phoenix"
 import LiveSocket from "phoenix_live_view"
 
-let liveSocket = new LiveSocket("/live")
+let liveSocket = new LiveSocket("/live", Socket)
 liveSocket.connect()
 
 // Import local files
