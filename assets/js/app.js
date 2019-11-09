@@ -25,7 +25,7 @@ import 'classlist-polyfill';
 import {Socket} from 'phoenix';
 import LiveSocket from 'phoenix_live_view';
 
-let liveSocket = new LiveSocket("/live", Socket);
+let liveSocket = new LiveSocket('/live', Socket);
 liveSocket.connect();
 
 // Import local files
