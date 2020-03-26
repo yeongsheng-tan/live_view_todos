@@ -4,8 +4,8 @@ defmodule LiveViewTodos.MixProject do
   def project do
     [
       app: :live_view_todos,
-      version: "0.2.1",
-      elixir: "~> 1.10.1",
+      version: "0.3.0",
+      elixir: "~> 1.10.2",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -40,7 +40,7 @@ defmodule LiveViewTodos.MixProject do
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.7"},
+      {:phoenix_live_view, "~> 0.10.0"},
       {:floki, ">= 0.0.0", only: :test},
       {:phoenix_pubsub_redis, "~> 2.1.0"},
       {:gettext, "~> 0.11"},

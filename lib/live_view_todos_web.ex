@@ -43,7 +43,6 @@ defmodule LiveViewTodosWeb do
       import LiveViewTodosWeb.ErrorHelpers
       import LiveViewTodosWeb.Gettext
       import Phoenix.LiveView.Helpers
-      # import Phoenix.LiveView, only: [live_render: 2, live_render: 3, live_link: 1, live_link: 2, live_component: 2, live_component: 3, live_component: 4]
       alias LiveViewTodosWeb.Router.Helpers, as: Routes
     end
   end
