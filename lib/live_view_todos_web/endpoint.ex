@@ -9,6 +9,7 @@ defmodule LiveViewTodosWeb.Endpoint do
 
   socket "/live", Phoenix.LiveView.Socket,
     websocket: [connect_info: [session: @session_options]]
+
   socket "/socket", LiveViewTodosWeb.UserSocket,
     websocket: true,
     longpoll: false

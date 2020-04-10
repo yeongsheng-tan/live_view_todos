@@ -1,5 +1,5 @@
 defmodule LiveViewTodosWeb.TodoLive do
-  use Phoenix.LiveView
+  use Phoenix.LiveView, layout: {LiveViewTodosWeb.LayoutView, "live.html"}
   alias LiveViewTodos.Todos
   alias LiveViewTodosWeb.TodoView
 
