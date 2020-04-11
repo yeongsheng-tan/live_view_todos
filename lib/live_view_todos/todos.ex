@@ -118,7 +118,7 @@ defmodule LiveViewTodos.Todos do
     {:ok, result}
   end
 
-  defp broadcast_change({:error, result}, event) do
+  defp broadcast_change({:error, result}, _event) do
     {:error, result}
   end
 end

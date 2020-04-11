@@ -1,10 +1,11 @@
+<h1>LiveView Todo List</h1>
 <form action="#" phx-submit="add">
   <%= text_input :todo, :title, placeholder: "What do you want to get done?" %>
   <%= submit "Add", phx_disable_with: "Adding..." %>
 </form>
 <%= for todo <- @todos do %>
-<div>
-  <%= checkbox(:todo, :done, phx_click: "toggle_done", id: todo.id, phx_value_id: todo.id, value: todo.done) %>
-  <%= todo.title %>
-</div>
+  <div>
+    <%= checkbox(:todo, :done, phx_click: "toggle_done", id: todo.id, phx_value_id: todo.id, value: todo.done) %>
+    <%= todo.title %>
+  </div>
 <% end %>

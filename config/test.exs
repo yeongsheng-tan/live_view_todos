@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :live_view_todos, LiveViewTodos.Repo,
-  username: "root",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   database: "live_view_todos_test",
   hostname: "localhost",
   port: System.get_env("DB_PORT") || 5432,
