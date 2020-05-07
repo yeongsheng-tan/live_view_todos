@@ -4,7 +4,7 @@ defmodule LiveViewTodos.MixProject do
   def project do
     [
       app: :live_view_todos,
-      version: "0.5.0",
+      version: "0.6.0",
       elixir: "~> 1.10.3",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -20,7 +20,7 @@ defmodule LiveViewTodos.MixProject do
   def application do
     [
       mod: {LiveViewTodos.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :phoenix_pubsub_redis]
     ]
   end
 
@@ -33,16 +33,16 @@ defmodule LiveViewTodos.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4"},
-      {:phoenix_pubsub, "~> 1.1"},
+      {:phoenix, "~> 1.5", override: true},
+      {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 4.0"},
-      {:ecto_sql, "~> 3.1"},
+      {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.12.1", override: true},
       {:floki, ">= 0.0.0", only: :test},
-      {:phoenix_pubsub_redis, "~> 2.1.0"},
+      {:phoenix_pubsub_redis, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.1"}

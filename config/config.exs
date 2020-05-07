@@ -15,12 +15,7 @@ config :live_view_todos, LiveViewTodosWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "3oBX5LmYWz6jHZimo1BAuk7lr2SAA9rO/6x+YZnc9wffu8Hrx3V/tY6WKv5Jyjza",
   render_errors: [view: LiveViewTodosWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [
-    name: LiveViewTodos.PubSub,
-    adapter: Phoenix.PubSub.Redis,
-    host: "localhost", port: 6379,
-    node_name: System.get_env("NODE")
-  ],
+  pubsub_server: LiveViewTodos.PubSub,
   live_view: [
     signing_salt: "g28QTPcQw0OzkYgiWcDAel7EsohoMOrriLDaHmtqJDLwiLFYCecdYI5PCFtObZtN"
   ]

@@ -10,6 +10,11 @@ defmodule LiveViewTodos.Application do
     children = [
       # Start the Ecto repository
       LiveViewTodos.Repo,
+      {Phoenix.PubSub,
+       name: LiveViewTodos.PubSub,
+       adapter: Phoenix.PubSub.Redis,
+       host: "localhost", port: 6379,
+       node_name: System.get_env("NODE")},
       # Start the endpoint when the application starts
       LiveViewTodosWeb.Endpoint
       # Starts a worker by calling: LiveViewTodos.Worker.start_link(arg)
