@@ -10,8 +10,9 @@ defmodule LiveViewTodos.Application do
     children = [
       # Start the Ecto repository
       LiveViewTodos.Repo,
+      {Phoenix.PubSub, name: LiveViewTodos.PubSub},
       # Start the endpoint when the application starts
-      LiveViewTodosWeb.Endpoint
+      LiveViewTodosWeb.Endpoint,
       # Starts a worker by calling: LiveViewTodos.Worker.start_link(arg)
       # {LiveViewTodos.Worker, arg},
     ]
