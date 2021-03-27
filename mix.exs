@@ -4,8 +4,8 @@ defmodule LiveViewTodos.MixProject do
   def project do
     [
       app: :live_view_todos,
-      version: "0.6.0",
-      elixir: "~> 1.10.3",
+      version: "0.7.0",
+      elixir: "~> 1.11.4",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
