@@ -33,15 +33,15 @@ defmodule LiveViewTodos.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.5", override: true},
+      {:phoenix, "~> 1.5.8", override: true},
       {:phoenix_pubsub, "~> 2.0"},
-      {:phoenix_ecto, "~> 4.0"},
+      {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.13.0", override: true},
-      {:floki, ">= 0.0.0", only: :test},
+      {:phoenix_live_view, "~> 0.15.1", override: true},
+      {:floki, ">= 0.27.0", only: :test},
       {:phoenix_pubsub_redis, "~> 3.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
